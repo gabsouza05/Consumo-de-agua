@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eaf7ff;
+    color: #222;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    background: #dff3ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+
+.login h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.login p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.tema-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 10px 0;
+}
+
+.switch {
+    width: 50px;
+    height: 26px;
+    border: none;
+    border-radius: 20px;
+    background: #ccc;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.switch span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.switch.ativo {
+    background: #2196f3;
+}
+
+.switch.ativo span {
+    transform: translateX(24px);
+}
+
+.entrar {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #2196f3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.entrar:hover {
+    background: #1976d2;
+}
+
+body.dark {
+    background: #181818;
+    color: white;
+}
+
+body.dark .login {
+    background: #242424;
+}
+
+body.dark .login p {
+    color: #ccc;
+}
+
+body.dark .logo {
+    background: #303030;
+}
+
+body.dark .tema-box {
+    color: white;
+}

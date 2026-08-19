@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Consumo de água</title>
+
+    <link rel="stylesheet" href="../css/home.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="topo">
+
+            <div class="marca">
+
+                <div class="logo-menor">
+                    💧
+                </div>
+
+                <div>
+                    <h1>Consumo de água</h1>
+                    <p>Controle de consumo de água</p>
+                </div>
+
+            </div>
+
+            <button
+                class="tema-home"
+                onclick="trocarTema()"
+            >
+                Tema
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="card-icone">
+                    💧
+                </div>
+
+                <div>
+                    <p>Consumido hoje</p>
+                    <h2 id="totalAgua">0 ml</h2>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icone">
+                    🎯
+                </div>
+
+                <div>
+                    <p>Meta diária</p>
+                    <h2 id="metaAgua">0 ml</h2>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icone">
+                    %
+                </div>
+
+                <div>
+                    <p>Meta atingida</p>
+                    <h2 id="porcentagemMeta">0%</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="conteudo">
+
+            <div class="titulo">
+
+                <div>
+                    <h2>Meus registros</h2>
+                    <p>Consumos de água cadastrados</p>
+                </div>
+
+                <button
+                    class="adicionar"
+                    onclick="abrirModal()"
+                >
+                    +
+                </button>
+
+            </div>
+
+
+            <div id="listaAgua"></div>
+
+        </section>
+
+
+        <section class="grafico-area">
+
+            <div class="titulo-grafico">
+
+                <div>
+                    <h2>Consumo de água</h2>
+                    <p>Quantidade consumida por registro</p>
+                </div>
+
+            </div>
+
+            <div class="grafico-container">
+
+                <canvas id="grafico"></canvas>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div
+        class="modal"
+        id="modal"
+    >
+
+        <div class="modal-box">
+
+            <div class="modal-header">
+
+                <h2 id="tituloModal">
+                    Novo consumo
+                </h2>
+
+                <button onclick="fecharModal()">
+                    ×
+                </button>
+
+            </div>
+
+
+            <label for="data">
+                Data
+            </label>
+
+            <input
+                type="date"
+                id="data"
+            >
+
+
+            <label for="quantidade">
+                Quantidade em ml
+            </label>
+
+            <input
+                type="number"
+                id="quantidade"
+                placeholder="Ex: 500"
+                step="0.1"
+            >
+
+
+            <label for="peso">
+                Peso atual em kg
+            </label>
+
+            <input
+                type="number"
+                id="peso"
+                placeholder="Ex: 60"
+                step="0.1"
+            >
+
+
+            <button
+                class="salvar"
+                onclick="salvarAgua()"
+            >
+                Salvar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/home.js"></script>
+
+</body>
+
+</html>

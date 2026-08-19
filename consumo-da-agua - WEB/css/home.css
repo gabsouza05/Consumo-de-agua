@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f9fc;
+    color: #222;
+    min-height: 100vh;
+}
+
+header {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.topo {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-menor {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #dff3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.marca h1 {
+    font-size: 22px;
+}
+
+.marca p {
+    color: #777;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.tema-home {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #2196f3;
+    color: white;
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+.card-icone {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: #e0f4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.card p {
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.card h2 {
+    font-size: 22px;
+}
+
+.conteudo,
+.grafico-area {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    margin-bottom: 30px;
+}
+
+.titulo,
+.titulo-grafico {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.titulo h2,
+.titulo-grafico h2 {
+    font-size: 21px;
+}
+
+.titulo p,
+.titulo-grafico p {
+    color: #777;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.adicionar {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #2196f3;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.caminhada {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.caminhada:hover {
+    background: #f5fbff;
+}
+
+.caminhada h3 {
+    margin-bottom: 6px;
+}
+
+.caminhada p {
+    color: #777;
+    font-size: 14px;
+}
+
+.dados-caminhada {
+    margin-top: 8px;
+}
+
+.calorias {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
+}
+
+.calorias strong {
+    color: #2196f3;
+    font-size: 18px;
+}
+
+.calorias small {
+    color: #777;
+}
+
+.excluir {
+    margin-top: 7px;
+    border: none;
+    background: #ff5252;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.grafico-container {
+    width: 100%;
+    height: 300px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-box {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header button {
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-box label {
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 12px;
+}
+
+.modal-box input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.salvar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 22px;
+    border: none;
+    border-radius: 8px;
+    background: #2196f3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+body.dark {
+    background: #181818;
+    color: white;
+}
+
+body.dark header,
+body.dark .card,
+body.dark .conteudo,
+body.dark .grafico-area,
+body.dark .modal-box {
+    background: #242424;
+}
+
+body.dark .marca p,
+body.dark .card p,
+body.dark .titulo p,
+body.dark .titulo-grafico p,
+body.dark .caminhada p,
+body.dark .calorias small {
+    color: #ccc;
+}
+
+body.dark .caminhada {
+    border-color: #444;
+}
+
+body.dark .caminhada:hover {
+    background: #303030;
+}
+
+body.dark .modal-box input {
+    background: #303030;
+    color: white;
+    border-color: #555;
+}
+
+body.dark .logo-menor,
+body.dark .card-icone {
+    background: #303030;
+}
+
+@media (max-width: 800px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0 12px;
+        margin-top: 20px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .marca h1 {
+        font-size: 19px;
+    }
+
+    .marca p {
+        font-size: 12px;
+    }
+
+    .tema-home {
+        padding: 8px 12px;
+    }
+
+    .conteudo,
+    .grafico-area {
+        padding: 18px;
+    }
+
+    .caminhada {
+        align-items: flex-start;
+    }
+
+    .calorias {
+        text-align: right;
+    }
+}
